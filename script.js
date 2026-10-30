@@ -32,6 +32,11 @@ document.getElementById("multiplicar").addEventListener("click",function(){
 document.getElementById("dividir").addEventListener("click",function(){
     let numeros= obtenerNumero();
     if(numeros===null)return;
+
+    if(numero[1]===0){
+        resultado.textContent="No se puede dividir entre cero";
+    } else{
+            resultado.textContent="Resultado: "+(numeros[0]/numeros[1])
+    }
     
-    resultado.textContent="Resultado: "+(numeros[0]/numeros[1])
-})
+});
